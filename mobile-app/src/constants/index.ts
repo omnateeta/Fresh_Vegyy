@@ -1,0 +1,3 @@
+export const DELIVERY_PROMISE_MINUTES = 10;
+
+

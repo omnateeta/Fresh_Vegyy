@@ -1,0 +1,47 @@
+{
+  "name": "freshveggie-backend",
+  "version": "0.1.0",
+  "private": true,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "dev": "nodemon --watch src --ext ts,js --exec ts-node src/index.ts",
+    "lint": "eslint \"src/**/*.{ts,tsx}\"",
+    "start": "node dist/index.js",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "axios": "1.7.2",
+    "bcryptjs": "2.4.3",
+    "cors": "2.8.5",
+    "dotenv": "16.4.5",
+    "express": "4.19.2",
+    "express-validator": "7.0.1",
+    "helmet": "7.1.0",
+    "http-status-codes": "2.3.0",
+    "jsonwebtoken": "9.0.2",
+    "mongoose": "8.5.1",
+    "morgan": "1.10.0",
+    "socket.io": "4.7.5",
+    "uuid": "9.0.1"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "2.4.6",
+    "@types/express": "4.17.21",
+    "@types/jsonwebtoken": "9.0.6",
+    "@types/morgan": "1.9.7",
+    "@types/node": "20.16.5",
+    "@typescript-eslint/eslint-plugin": "7.8.0",
+    "@typescript-eslint/parser": "7.8.0",
+    "eslint": "8.57.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-import": "2.29.1",
+    "nodemon": "3.1.4",
+    "prettier": "3.3.3",
+    "ts-node": "10.9.2",
+    "typescript": "5.4.5",
+    "vitest": "1.6.0"
+  }
+}
+

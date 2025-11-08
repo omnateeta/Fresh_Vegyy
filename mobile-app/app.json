@@ -1,0 +1,31 @@
+{
+  "expo": {
+    "name": "FreshVeggie",
+    "slug": "freshveggie",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#4CAF50"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#4CAF50"
+      },
+      "package": "com.freshveggie.app"
+    },
+    "web": {},
+    "extra": {
+      "eas": {
+        "projectId": "d1bef4c3-0000-0000-0000-freshveggie"
+      },
+      "apiBaseUrl": "http://localhost:4000/api",
+      "socketUrl": "http://localhost:4000"
+    }
+  }
+}
+

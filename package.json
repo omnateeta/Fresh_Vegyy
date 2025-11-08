@@ -1,0 +1,19 @@
+{
+  "name": "freshveggie",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "mobile-app",
+    "delivery-app"
+  ],
+  "scripts": {
+    "build": "yarn workspaces foreach run build",
+    "lint": "yarn workspaces foreach run lint",
+    "test": "yarn workspaces foreach --parallel run test"
+  },
+  "devDependencies": {
+    "typescript": "5.3.3"
+  }
+}
+
+

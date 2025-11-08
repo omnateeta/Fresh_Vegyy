@@ -1,0 +1,22 @@
+{
+  "expo": {
+    "name": "FreshVeggie Rider",
+    "slug": "freshveggie-rider",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "assetBundlePatterns": ["**/*"],
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#43A047"
+      },
+      "package": "com.freshveggie.rider"
+    },
+    "web": {},
+    "extra": {
+      "apiBaseUrl": "http://localhost:4000/api",
+      "socketUrl": "http://localhost:4000"
+    }
+  }
+}
+
+

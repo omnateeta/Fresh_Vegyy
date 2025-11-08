@@ -1,0 +1,27 @@
+version: '3.9'
+
+services:
+  api:
+    build:
+      context: ../backend
+    env_file:
+      - ../backend/env.sample
+    environment:
+      - PORT=4000
+      - MONGODB_URI=mongodb://mongo:27017/freshveggie
+    ports:
+      - '4000:4000'
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:6
+    ports:
+      - '27017:27017'
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
+
+
