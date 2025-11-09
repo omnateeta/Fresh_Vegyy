@@ -1,4 +1,4 @@
-# FreshVeggie Platform Architecture
+# FreshVeggie Platform Architecture  
 
 ## System Overview
 
