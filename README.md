@@ -1,4 +1,4 @@
-## FreshVeggie Platform Overview 
+## FreshVeggie Platform Overview   
 
 FreshVeggie is a real-time vegetable shopping platform that connects urban customers with fresh local produce. The system consists of three main components:
 
