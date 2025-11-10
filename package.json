@@ -3,7 +3,7 @@
   "private": true,
   "workspaces": [
     "backend",
-    "mobile-app",
+    "mobile-app", 
     "delivery-app"
   ],
   "scripts": {
