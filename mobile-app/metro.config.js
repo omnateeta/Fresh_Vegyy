@@ -1,4 +1,3 @@
-// Learn more https://docs.expo.dev/guides/customizing-metro
 const { getDefaultConfig } = require('expo/metro-config');
 const path = require('path');
 
@@ -8,10 +7,7 @@ const config = getDefaultConfig(__dirname);
 // Ensure platform-specific extensions are supported
 config.resolver.sourceExts = [...config.resolver.sourceExts, 'web.js', 'web.ts', 'web.tsx'];
 
-// Store original resolver
-const defaultResolver = config.resolver.resolveRequest;
-
-// Configure resolver to handle react-native-maps on web
+// Custom resolver for react-native-maps on web
 config.resolver.resolveRequest = (context, moduleName, platform) => {
   // Intercept react-native-maps on web and return web-specific file
   if (platform === 'web' && moduleName === 'react-native-maps') {
@@ -37,23 +33,15 @@ config.resolver.resolveRequest = (context, moduleName, platform) => {
     } catch (error) {
       console.error('Error in Metro resolver for react-native-maps:', error);
     }
+    // Return a simple mock if nothing else works
+    return {
+      type: 'empty'
+    };
   }
   
   // Use default resolution for all other modules
-  try {
-    return defaultResolver(context, moduleName, platform);
-  } catch (error) {
-    // If default resolver fails for react-native-maps on web, return mock
-    if (platform === 'web' && moduleName === 'react-native-maps') {
-      const webMockPath = path.resolve(__dirname, 'react-native-maps.web.js');
-      return {
-        type: 'sourceFile',
-        filePath: webMockPath,
-      };
-    }
-    throw error;
-  }
+  // We need to call the resolver function correctly
+  return context.resolveRequest(context, moduleName, platform);
 };
 
 module.exports = config;
-
